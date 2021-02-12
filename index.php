@@ -1,8 +1,9 @@
 <?php
-recuire_once("includes/header.php");
+require_once("include/CApp.php");
 ?>
-    
 
-<?php
-recuire_once("includes/footer.php");
-?>
+<?php $app->renderHeader("Home"); ?>
+
+
+
+<?php $app->renderFooter(); ?>
