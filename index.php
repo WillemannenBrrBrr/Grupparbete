@@ -1,9 +1,14 @@
 <?php
 require_once("include/CApp.php");
+
+$app->renderHeader("Home"); 
+
 ?>
 
-<?php $app->renderHeader("Home"); ?>
 
 
+<?php 
 
-<?php $app->renderFooter(); ?>
+$app->renderFooter(); 
+
+?>

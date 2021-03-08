@@ -1,8 +1,15 @@
 <?php
 
+require_once("CFormCreator.php");
+
 class CApp
 {
-    function renderHeader(string $title)
+    public function __construct()
+    {
+        $this->m_formCreator = new CFormCreator($this);
+    }
+
+    public function renderHeader(string $title)
     {
         ?>
 
@@ -19,7 +26,7 @@ class CApp
         <?php
     }
 
-    function renderFooter()
+    public function renderFooter()
     {
         ?>
 
@@ -29,6 +36,13 @@ class CApp
 
         <?php
     }
+
+    public function &getForm() { return $this->m_formCreator; }
+
+    //////////////////////////////////////////////////
+    //variables
+    private $m_formCreator = null;
+
 };
 
     $app = new CApp();
