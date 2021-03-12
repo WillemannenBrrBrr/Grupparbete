@@ -1,0 +1,33 @@
+
+@media screen and(max-width: 650 px)
+{
+    
+}
+
+@media screen and(min-width: 650 px)
+{
+    header{
+        background-color: dodgerblue;
+    }
+
+    .container
+    {
+        display: grid;
+        grid-template-rows: auto 5em;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    footer{
+        grid-row: 2;
+        background-color: dimgrey;
+    }
+
+    header, footer{
+        grid-column: 1/span 2;
+    }
+}
+
+@media screen and(min-width: 900 px)
+{
+
+}
