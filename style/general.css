@@ -6,29 +6,7 @@
 
 @media screen and(min-width: 650 px)
 {
-<<<<<<< HEAD
-    header{
-        background-color: dodgerblue;
-    }
-
-    .container
-    {
-        display: grid;
-        grid-template-rows: auto 5em;
-        grid-template-columns: 1fr 3fr;
-    }
-
-    footer{
-        grid-row: 2;
-        background-color: dimgrey;
-    }
-
-    header, footer{
-        grid-column: 1/span 2;
-    }
-=======
     
->>>>>>> 86c9006cf9356de4d6e2e4cd01e639c116d22bdf
 }
 
 @media screen and(min-width: 900 px)
