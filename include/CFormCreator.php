@@ -19,6 +19,18 @@ class CFormCreator
         echo('<input type="' . $type . '" name="' . $name . '" id="' . $name . '">');
     }
 
+    public function createInputTel(string $name, string $label)
+    {
+        echo('<label for="' . $name . '">' . $label . ':</label>');
+        echo('<input type="tel" name="' . $name . '" id="' . $name . '" pattern="[0-9]{10}"');
+    }
+
+    public function createInputNumber(string $name, string $label, int $min, int $max)
+    {
+        echo('<label for="' . $name . '">' . $label . ':</label>');
+        echo('<input type="number" name="' . $name . '" id="' . $name . '" min="' . $min . '" max="' . $max . '">');
+    }
+
     public function createSubmit(string $label)
     {
         echo('<input type="submit" value="' . $label . '">');

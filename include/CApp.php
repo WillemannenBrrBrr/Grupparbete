@@ -1,6 +1,7 @@
 <?php
 
 require_once("CFormCreator.php");
+require_once("CDatabase.php");
 
 function print_r_pre($data)
 {
@@ -14,6 +15,7 @@ class CApp
     public function __construct()
     {
         $this->m_formCreator = new CFormCreator($this);
+        $this->m_db = new CDatabase($this);
     }
 
     public function renderHeader(string $title)
@@ -44,11 +46,13 @@ class CApp
         <?php
     }
 
-    public function &getForm() { return $this->m_formCreator; }
+    public function &getForm()      { return $this->m_formCreator; }
+    public function &getDB()        { return $this->m_db; }
 
     //////////////////////////////////////////////////
     //variables
     private $m_formCreator = null;
+    private $m_db = null;
 
 };
 
