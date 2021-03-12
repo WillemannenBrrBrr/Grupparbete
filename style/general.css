@@ -1,0 +1,19 @@
+.footer
+{
+    background-color: aquamarine;
+}
+
+@media screen and(max-width: 650 px)
+{
+    
+}
+
+@media screen and(min-width: 650 px)
+{
+    
+}
+
+@media screen and(min-width: 900 px)
+{
+
+}
