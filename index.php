@@ -6,7 +6,7 @@ $app->renderHeader("Home");
 ?>
 
 
- hejehjehej
+
 <?php 
 
 $app->renderFooter(); 
