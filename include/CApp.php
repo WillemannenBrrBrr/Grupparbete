@@ -2,6 +2,13 @@
 
 require_once("CFormCreator.php");
 
+function print_r_pre($data)
+{
+    echo('<pre>');
+    print_r($data);
+    echo('</pre>');
+}
+
 class CApp
 {
     public function __construct()

@@ -15,7 +15,7 @@ class CFormCreator
 
     public function createInput(string $type, string $name, string $label)
     {
-        echo('<label for="' . $name . '">' . $label . '</label>');
+        echo('<label for="' . $name . '">' . $label . ':</label>');
         echo('<input type="' . $type . '" name="' . $name . '" id="' . $name . '">');
     }
 
