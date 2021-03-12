@@ -44,7 +44,7 @@ class CApp
     public function renderFooter()
     {
         ?>
-
+        <footer></footer>
         <script src="script/tools.js"></script>
         </section>
         </body>
