@@ -9,7 +9,7 @@ $form = $app->getForm();
 if(!empty($_POST))
 {
     $name = $_POST["name"];
-    $number = $_POST["number"];
+    $number = "0" . $_POST["number"];
     $email = $_POST["email"];
     $table = $_POST["table"];
 
