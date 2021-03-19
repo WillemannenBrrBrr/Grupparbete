@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: localhost
--- Tid vid skapande: 12 mars 2021 kl 12:37
+-- Tid vid skapande: 19 mars 2021 kl 12:33
 -- Serverversion: 10.4.12-MariaDB
 -- PHP-version: 7.4.4
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `booking` (
   `id` int(11) NOT NULL,
   `namn` varchar(40) NOT NULL,
-  `nummer` int(10) NOT NULL,
+  `nummer` varchar(10) NOT NULL,
   `email` varchar(100) NOT NULL,
   `bord` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
