@@ -36,16 +36,24 @@ class CApp
         </head>
         <header>Header</header>
         <section class="content">
+            
+            
+        <body>
+
+        <?php
+    }
+
+    public function renderStart()
+    {
+        ?>
             <div class="container">
+                <div class="openingHours">Öppettider</div>
                 <div class="flexContainer">
-                    <div class="openingHours">Öppettider</div>
+                    <div class="bookTable"><a href="selectTabel.php">Boka nu</a></div>
                     <div class="menu">Meny</div>
                 </div>
                 <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
             </div>
-            
-        <body>
-
         <?php
     }
 

@@ -8,6 +8,10 @@
     height: 200px;
 }
 
+.bookTable{
+    background-color:darkslategray ;
+}
+
 .alreadyBooked{
     background-color: cadetblue;
     height: 200px;
@@ -34,7 +38,7 @@
         justify-content: space-evenly;
     }
 
-    .openingHours, .menu{
+    .bookTable, .menu{
         flex-grow: 1;
     }
 
