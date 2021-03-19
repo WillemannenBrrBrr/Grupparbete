@@ -5,7 +5,9 @@ $app->renderHeader("Home");
 
 ?>
 
-
+<a href="selectTabel.php">
+<button>Boka nu</button>
+</a>
 
 <?php 
 

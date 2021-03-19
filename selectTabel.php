@@ -4,12 +4,10 @@ require_once("include/CApp.php");
 
 $app->renderHeader("Bords val"); 
 
-$form = $app->getForm();
-
 if(!empty($_POST))
 {
     $name = $_POST["name"];
-    $number = "0" . $_POST["number"];
+    $number = $_POST["number"];
     $email = $_POST["email"];
     $table = $_POST["table"];
 
@@ -21,13 +19,13 @@ if(!empty($_POST))
 
 echo('<h1>Bords val</h1>');
 
-$form->open("personalInfo");
-$form->createInput("text", "name", "För/Efternamn");
-$form->createInputTel("number", "Telefonnummer");
-$form->createInput("email", "email", "E-Mail");
-$form->createInputNumber("table", "Bord", "1", "15");
-$form->createSubmit("Boka");
-$form->close(); 
+$app->getForm()->open("personalInfo");
+$app->getForm()->createInput("text", "name", "För/Efternamn");
+$app->getForm()->createInputTel("number", "Telefonnummer");
+$app->getForm()->createInput("email", "email", "E-Mail");
+$app->getForm()->createInputNumber("table", "Bord", "1", "15");
+$app->getForm()->createSubmit("Boka");
+$app->getForm()->close(); 
 
 
 
