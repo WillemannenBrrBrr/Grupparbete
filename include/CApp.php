@@ -34,13 +34,13 @@ class CApp
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
             integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         </head>
-        <header>
-            header
-        </header>
+        <header></header>
         <section class="content">
             <div class="container">
-                <div class="openingHours">Öppettider</div>
-                <div class="menu">Meny</div>
+                <div class="flexContainer">
+                    <div class="openingHours">Öppettider</div>
+                    <div class="menu">Meny</div>
+                </div>
                 <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
             </div>
             
