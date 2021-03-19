@@ -47,7 +47,7 @@ class CApp
             <div class="container">
                 <div class="openingHours">Öppettider</div>
                 <div class="flexContainer">
-                    <div class="bookTable"><a href="selectTabel.php">Boka nu</a></div>
+                    <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
                     <div class="menu">Meny</div>
                 </div>
                 <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
