@@ -36,6 +36,9 @@ class CApp
 
         </header>
         <section class="container">
+            <div class="openingHours">Öppettider</div>
+            <div class="menu">Meny</div>
+            <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
         <body>
 
         <?php
@@ -44,7 +47,10 @@ class CApp
     public function renderFooter()
     {
         ?>
-        <footer>footer</footer>
+        <footer>
+            <div class="footerLeft">Kontakt/Info</div>
+            <div class="footerRight">Sociala medier</div>
+        </footer>
         <script src="script/tools.js"></script>
         </section>
         </body>
