@@ -1,3 +1,24 @@
+.openingHours{
+    background-color: aquamarine;
+}
+
+.menu{
+    background-color: burlywood;
+}
+
+.alreadyBooked{
+
+}
+
+.footerLeft{
+
+}
+
+.footerRight{
+
+}
+
+
 @media screen and(min-width: 600 px)
 {
     .container{
