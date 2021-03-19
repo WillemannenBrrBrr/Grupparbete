@@ -35,10 +35,13 @@ class CApp
         <header>
 
         </header>
-        <section class="container">
-            <div class="openingHours">Öppettider</div>
-            <div class="menu">Meny</div>
-            <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
+        <section class="content">
+            <div class="container">
+                <div class="openingHours">Öppettider</div>
+                <div class="menu">Meny</div>
+                <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
+            </div>
+            
         <body>
 
         <?php

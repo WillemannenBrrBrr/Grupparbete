@@ -1,36 +1,53 @@
 .openingHours{
     background-color: aquamarine;
+    height: 200px;
 }
 
 .menu{
     background-color: burlywood;
+    height: 200px;
 }
 
 .alreadyBooked{
-
+    background-color: cadetblue;
+    height: 200px;
 }
 
 .footerLeft{
-
+    background-color: cornflowerblue;
 }
 
 .footerRight{
-
+    background-color: darkgray;
 }
 
 
-@media screen and(min-width: 600 px)
+@media screen and (min-width: 600px)
 {
     .container{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        
     }
 }
 
-@media screen and(min-width: 900 px)
+@media screen and (min-width: 900px)
 {
     .container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        
     }
+
+    footer{
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .footerLeft{
+        grid-column: 1;
+    }
+    
+    .footerRight{
+        grid-column: 2;
+    }
+    
 }
