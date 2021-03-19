@@ -2,6 +2,7 @@
 
 require_once("CFormCreator.php");
 require_once("CDatabase.php");
+require_once("CAvailableOrNot.php");
 
 function print_r_pre($data)
 {
@@ -16,6 +17,7 @@ class CApp
     {
         $this->m_formCreator = new CFormCreator($this);
         $this->m_db = new CDatabase($this);
+        $this->m_availableOrNot = new CAvailableOrNot($this);
     }
 
     public function renderHeader(string $title)
@@ -33,7 +35,7 @@ class CApp
             integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         </head>
         <header>
-
+            header
         </header>
         <section class="content">
             <div class="container">
@@ -64,11 +66,13 @@ class CApp
 
     public function &getForm()      { return $this->m_formCreator; }
     public function &getDB()        { return $this->m_db; }
+    public function &getAvailble()  { return $this->m_availableOrNot; }
 
     //////////////////////////////////////////////////
     //variables
     private $m_formCreator = null;
     private $m_db = null;
+    private $m_availableOrNot = null;
 
 };
 
