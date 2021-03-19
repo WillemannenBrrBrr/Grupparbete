@@ -39,7 +39,7 @@ class CFormCreator
     public function close()
     {
         echo('</form>');
-        echo('</div');
+        echo('</div>');
     }
 
     //////////////////////////////////////////////////
