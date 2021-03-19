@@ -11,9 +11,11 @@ if(!empty($_POST))
     $email = $_POST["email"];
     $table = $_POST["table"];
 
+    /* $query = "SELECT `available` FROM `tables` WHERE id = $table";
+    $app->getdb()->query($query); */
+
     $query = "INSERT INTO `booking` (`namn`, `nummer`, `email`, `bord`) 
     VALUES ('$name', '$number', '$email', '$table')";
-
     $app->getdb()->query($query);
 
     $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
