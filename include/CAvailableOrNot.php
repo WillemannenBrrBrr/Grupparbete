@@ -7,7 +7,10 @@ class CAvailableOrNot
         $this->m_app = $app;
     }
 
-    
+    /* public function setAvailability($_POST)
+    {
+        
+    } */
 
     //////////////////////////////////////////////////
     //variables

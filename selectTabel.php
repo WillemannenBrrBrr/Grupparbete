@@ -15,6 +15,9 @@ if(!empty($_POST))
     VALUES ('$name', '$number', '$email', '$table')";
 
     $app->getdb()->query($query);
+
+    $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
+    $app->getdb()->query($query);
 }
 
 echo('<h1>Bords val</h1>');
