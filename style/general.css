@@ -42,6 +42,11 @@
 
 @media screen and (min-width: 900px)
 {
+    header{
+        background-color: darkred;
+        height: 200px;
+    }
+
     .container{
         
     }
