@@ -2,7 +2,7 @@
 
 require_once("include/CApp.php");
 
-$app->renderHeader("Bords val"); 
+$app->renderHeader("Bordsval"); 
 
 if(!empty($_POST))
 {
