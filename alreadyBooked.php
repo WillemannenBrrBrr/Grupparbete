@@ -13,7 +13,7 @@ if(!empty($_POST))
     $result = $app->getdb()->query($query);
     if($result->num_rows != 0)
     {
-        echo('')
+        echo('Din bokning');
     }
     else
     {
