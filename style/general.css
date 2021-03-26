@@ -1,5 +1,16 @@
-h3{
+
+a{
     text-align: center;
+    color: 	#010101;
+    text-decoration: none;
+}
+
+a:hover{
+    color: darkblue;
+}
+
+a:visited{
+    color: 	#010101;
 }
 
 .openingHours{
@@ -21,6 +32,8 @@ h3{
 .alreadyBooked{
     background-color: cadetblue;
     height: 200px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .footerLeft{
@@ -53,8 +66,10 @@ h3{
 @media screen and (min-width: 900px)
 {
     header{
-        background-color: darkred;
-        height: 200px;
+        background-image: url(../img/logo.png);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: auto;
     }
 
     .container{

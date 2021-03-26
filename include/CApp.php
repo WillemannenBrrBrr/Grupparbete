@@ -32,7 +32,7 @@ class CApp
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
             integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         </head>
-        <header>Header</header>
+        <header></header>
         <section class="content">
             
             
@@ -45,10 +45,10 @@ class CApp
     {
         ?>
             <div class="container">
-                <div class="openingHours"><h3><a href="">Öppettider</a></h3></div>
+                <div class="openingHours"><a href="">Öppettider</a></div>
                 <div class="flexContainer">
-                    <div class="bookTable"><h3><a href="selectTable.php">Boka nu</a></h3></div>
-                    <div class="menu"><h3><a href="menu.php">Se vår meny</a></h3></div>
+                    <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
+                    <div class="menu"><a href="menu.php">Se vår meny</a></div>
                 </div>
                 <div class="alreadyBooked"><a href="alreadyBooked.php">Har du redan bokat ett bord? Se din bokning här</a></div>
             </div>
