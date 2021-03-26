@@ -22,7 +22,7 @@ class CFormCreator
     public function createInputTel(string $name, string $label)
     {
         echo('<label for="' . $name . '">' . $label . ':</label>');
-        echo('<input type="tel" name="' . $name . '" id="' . $name . '" pattern="[0-9]{10}"');
+        echo('<input type="tel" name="' . $name . '" id="' . $name . '" pattern="[0-9]{10}">');
     }
 
     public function createInputNumber(string $name, string $label, int $min, int $max)
