@@ -1,6 +1,23 @@
+
+a{
+    text-align: center;
+    color: 	#010101;
+    text-decoration: none;
+}
+
+a:hover{
+    color: darkblue;
+}
+
+a:visited{
+    color: 	#010101;
+}
+
 .openingHours{
     background-color: aquamarine;
     height: 200px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .menu{
@@ -15,6 +32,8 @@
 .alreadyBooked{
     background-color: cadetblue;
     height: 200px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .footerLeft{
@@ -47,8 +66,10 @@
 @media screen and (min-width: 900px)
 {
     header{
-        background-color: darkred;
-        height: 200px;
+        background-image: url(../img/logo.png);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: auto;
     }
 
     .container{
