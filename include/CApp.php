@@ -50,7 +50,7 @@ class CApp
                     <div class="bookTable"><h3><a href="selectTable.php">Boka nu</a></h3></div>
                     <div class="menu"><h3><a href="menu.php">Se vår meny</a></h3></div>
                 </div>
-                <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
+                <div class="alreadyBooked"><a href="alreadyBooked.php">Har du redan bokat ett bord? Se din bokning här</a></div>
             </div>
         <?php
     }

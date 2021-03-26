@@ -13,7 +13,7 @@ if(!empty($_POST))
 
     $query = "SELECT bord FROM booking WHERE id = $table";
     $result = $app->getdb()->query($query);
-    
+
     if($result->num_rows == 0)
     {
         die("bordet är redan bokat");
@@ -26,8 +26,6 @@ if(!empty($_POST))
     $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
     $app->getdb()->query($query);
 }
-
-echo('<h1>Bords val</h1>');
 
 $app->getForm()->open("personalInfo");
 $app->getForm()->createInput("text", "name", "För/Efternamn");
