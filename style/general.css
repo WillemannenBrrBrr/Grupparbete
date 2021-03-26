@@ -1,6 +1,12 @@
+h3{
+    text-align: center;
+}
+
 .openingHours{
     background-color: aquamarine;
     height: 200px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .menu{

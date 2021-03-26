@@ -45,10 +45,10 @@ class CApp
     {
         ?>
             <div class="container">
-                <div class="openingHours">Öppettider</div>
+                <div class="openingHours"><h3><a href="">Öppettider</a></h3></div>
                 <div class="flexContainer">
-                    <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
-                    <div class="menu"><a href="menu.php">Se vår meny</a></div>
+                    <div class="bookTable"><h3><a href="selectTable.php">Boka nu</a></h3></div>
+                    <div class="menu"><h3><a href="menu.php">Se vår meny</a></h3></div>
                 </div>
                 <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning här</div>
             </div>
