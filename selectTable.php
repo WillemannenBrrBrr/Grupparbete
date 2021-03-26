@@ -11,8 +11,13 @@ if(!empty($_POST))
     $email = $_POST["email"];
     $table = $_POST["table"];
 
-    /* $query = "SELECT `available` FROM `tables` WHERE id = $table";
-    $app->getdb()->query($query); */
+    $query = "SELECT bord FROM booking WHERE id = $table";
+    $result = $app->getdb()->query($query);
+    
+    if($result->num_rows == 0)
+    {
+        die("bordet är redan bokat");
+    }
 
     $query = "INSERT INTO `booking` (`namn`, `nummer`, `email`, `bord`) 
     VALUES ('$name', '$number', '$email', '$table')";
