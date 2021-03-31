@@ -25,7 +25,7 @@ $app->getForm()->open("alreadyBookedForm");
 $app->getForm()->createInput("text", "name", "För/Efternamn");
 $app->getForm()->createInput("email", "email", "E-mail");
 $app->getForm()->createInputTel("number", "Telefonnummer");
-$app->getForm()->createSubmit("Kolla");
+$app->getForm()->createSubmit("Se din bokning");
 $app->getForm()->close();
 
 $app->renderFooter(); 

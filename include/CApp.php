@@ -1,5 +1,4 @@
 <?php
-
 require_once("CFormCreator.php");
 require_once("CDatabase.php");
 
