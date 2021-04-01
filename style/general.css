@@ -1,3 +1,17 @@
+body{
+    margin: 0px;
+}
+
+header{
+    background-color: black;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
 
 a{
     text-align: center;
@@ -45,6 +59,19 @@ a:visited{
 }
 
 
+.personalInfo{
+    display: grid;
+    grid-template-columns: auto 100px;
+}
+
+.tableMap{
+    width: 40%;
+}
+
+.personalInfo input{
+
+}
+
 @media screen and (min-width: 600px)
 {
     .container{
@@ -65,13 +92,6 @@ a:visited{
 
 @media screen and (min-width: 900px)
 {
-    header{
-        background-image: url(../img/logo.png);
-        background-repeat: no-repeat;
-        height: 500px;
-        width: auto;
-    }
-
     .container{
         
     }
