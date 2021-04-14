@@ -14,6 +14,7 @@ if(!empty($_POST))
     $query = "SELECT `available` FROM `tables` WHERE id = $table";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
+    
     if($data["available"] == 0)
     {
         echo("bordet är redan bokat");
