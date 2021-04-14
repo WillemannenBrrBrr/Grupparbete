@@ -7,9 +7,13 @@ class CFormCreator
         $this->m_app = $app;
     }
 
-    public function open(string $class)
+    public function openDiv(string $class)
     {
         echo('<div class="' . $class . '">');
+    }
+
+    public function open()
+    {
         echo('<form method="post">');
     }
 

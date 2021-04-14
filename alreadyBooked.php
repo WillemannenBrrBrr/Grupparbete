@@ -9,8 +9,9 @@ if(!empty($_POST))
     $number = $_POST["number"];
     $email = $_POST["email"];
 
-    $query = "SELECT `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
+    $query = "SELECT `namn`, `nummer`, `email` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
     $result = $app->getdb()->query($query);
+
     if($result->num_rows != 0)
     {
         echo('Din bokning');

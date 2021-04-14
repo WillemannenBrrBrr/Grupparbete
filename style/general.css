@@ -58,18 +58,18 @@ a:visited{
     background-color: darkgray;
 }
 
-
 .personalInfo{
     display: grid;
-    grid-template-columns: auto 100px;
+    grid-template-columns: 650px auto;
 }
 
 .tableMap{
-    width: 40%;
+    width: 600px;
+    grid-column: 1;
 }
 
-.personalInfo input{
-
+.personalInfo form{
+    width: 50px;
 }
 
 @media screen and (min-width: 600px)
