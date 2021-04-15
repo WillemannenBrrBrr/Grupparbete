@@ -30,10 +30,18 @@ class CApp
             <link rel="stylesheet" href="style/general.css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
             integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+            <link rel="icon" href="img/favicon.ico" />
         </head>
         <body>
         <header>
-            <img class="logo" alt="logo" src="img/logo.png">
+            <nav>
+                <ul>
+                    <a id="logo" href="index.php"><img src="img/logoNav.png" alt="Logga Meny"></a>
+                    <li><a href="">Meny</a></li>
+                    <li><a href="">Öppettider</a></li>
+                    <li><a href="">Kontakt</a></li>
+                </ul>
+            </nav>
         </header>
         <section class="content">
             
@@ -60,12 +68,11 @@ class CApp
     public function renderFooter()
     {
         ?>
+        </section>
         <footer>
-            <div class="footerLeft">Kontakt/Info</div>
-            <div class="footerRight">Sociala medier</div>
+            <img src="img/logoFooter.png" alt="Logga Footer" class="logoFooter">
         </footer>
         <script src="script/tools.js"></script>
-        </section>
         </body>
         </html>
 

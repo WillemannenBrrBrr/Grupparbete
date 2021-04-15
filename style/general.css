@@ -5,7 +5,11 @@ body{
 }
 
 header{
-    background-color: black;
+    background-color: blanchedalmond;
+}
+
+.content{
+    background-color: #8b0000;
 }
 
 .logo{
@@ -17,7 +21,7 @@ header{
 
 a{
     text-align: center;
-    color: 	#010101;
+    color: 	#dbd2d2;
     text-decoration: none;
 }
 
@@ -29,35 +33,29 @@ a:visited{
     color: 	#010101;
 }
 
-.openingHours{
-    background-color: aquamarine;
-    height: 200px;
-    width: 50%;
-    margin: 0 auto;
+a#logo{
+
 }
 
-.menu{
-    background-color: burlywood;
-    height: 200px;
+nav{
+    background-color: #8b0000;
 }
 
-.bookTable{
-    background-color:darkslategray ;
+ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 1rem; 
+    
 }
 
-.alreadyBooked{
-    background-color: cadetblue;
-    height: 200px;
-    width: 50%;
-    margin: 0 auto;
+li{
+    margin: 1rem;
+    font-size: 1em;
 }
 
-.footerLeft{
-    background-color: cornflowerblue;
-}
-
-.footerRight{
-    background-color: darkgray;
+li:hover{
+    background-color: #6e0101;
 }
 
 .personalInfo{
@@ -72,6 +70,11 @@ a:visited{
 
 .personalInfo form{
     width: 50px;
+}
+
+footer{
+    margin-top: 1em;
+    background-color: #8b0000;
 }
 
 @media screen and (min-width: 600px)
@@ -94,14 +97,22 @@ a:visited{
 
 @media screen and (min-width: 900px)
 {
-    .container{
-        
+    .content{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    a#logo{
+        margin-right: 40em;
     }
 
     footer{
-        height: 200px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+    
+    .logoFooter{
+        margin-left: 25em;
     }
     
     .footerLeft{
