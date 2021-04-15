@@ -9,12 +9,15 @@ if(!empty($_POST))
     $number = $_POST["number"];
     $email = $_POST["email"];
 
-    $query = "SELECT `namn`, `nummer`, `email` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
+    $query = "SELECT `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
     $result = $app->getdb()->query($query);
+    $data = $result->fetch_assoc();
 
     if($result->num_rows != 0)
     {
-        echo('Din bokning');
+        echo("Din bokning" . "<br/>");
+        echo("Namn: " . $data["namn"] . "<br/>");
+        echo("Bord: " . $data["bord"]);
     }
     else
     {
