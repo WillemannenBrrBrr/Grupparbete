@@ -1,7 +1,8 @@
 body{
-    margin: 0px;
     background-image: url(../img/background.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -9,7 +10,7 @@ header{
 }
 
 .content{
-    background-color: #8b0000;
+    background-color: #efebde;
 }
 
 .logo{
@@ -89,10 +90,6 @@ footer{
         justify-content: space-evenly;
     }
 
-    .bookTable, .menu{
-        flex-grow: 1;
-    }
-
 }
 
 @media screen and (min-width: 900px)
@@ -100,15 +97,17 @@ footer{
     .content{
         max-width: 90%;
         margin: 0 auto;
+        padding: 2em;
+    }
+
+    .flexContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     a#logo{
         margin-right: 40em;
-    }
-
-    footer{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
     }
     
     .logoFooter{
