@@ -34,9 +34,9 @@ class CApp
         </head>
         <body>
         <header>
-            <nav>
+            <nav class="flexMenu">
+                <a id="logo" href="index.php"><img src="img/logoNav.png" alt="Logga Meny"></a>
                 <ul>
-                    <a id="logo" href="index.php"><img src="img/logoNav.png" alt="Logga Meny"></a>
                     <li><a href="">Meny</a></li>
                     <li><a href="">Öppettider</a></li>
                     <li><a href="">Kontakt</a></li>
