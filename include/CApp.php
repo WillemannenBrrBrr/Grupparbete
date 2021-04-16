@@ -37,9 +37,9 @@ class CApp
             <nav class="flexMenu">
                 <a id="logo" href="index.php"><img src="img/logoNav.png" alt="Logga Meny"></a>
                 <ul>
-                    <li><a href="">Meny</a></li>
-                    <li><a href="">Öppettider</a></li>
-                    <li><a href="">Kontakt</a></li>
+                    <li><a href="restaurantMenu.php">Meny</a></li>
+                    <li><a href="openingHours.php">Öppettider</a></li>
+                    <li><a href="contact.php">Kontakt</a></li>
                 </ul>
             </nav>
         </header>
@@ -57,7 +57,7 @@ class CApp
             <div class="container">
                 <div class="flexContainer">
                     <div class="openingHours"><a href="">Öppettider</a></div>
-                    <div class="menu"><a href="menu.php">Se vår meny</a></div>
+                    <div class="menu"><a href="restaurantMenu.php">Se vår meny</a></div>
                 </div>
                 <div class="flexContainer">
                     <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
