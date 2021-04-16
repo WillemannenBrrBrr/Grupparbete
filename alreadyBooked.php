@@ -25,12 +25,13 @@ if(!empty($_POST))
     }
 }
 
-$app->getForm()->open("alreadyBookedForm");
+$app->getForm()->openForm("alreadyBookedForm");
 $app->getForm()->createInput("text", "name", "För- och Efternamn");
 $app->getForm()->createInput("email", "email", "E-mail");
 $app->getForm()->createInputTel("number", "Telefonnummer");
 $app->getForm()->createSubmit("Se din bokning");
-$app->getForm()->close();
+$app->getForm()->closeForm();
+$app->getForm()->closeDiv();
 
 $app->renderFooter(); 
 

@@ -12,7 +12,7 @@ class CFormCreator
         echo('<div class="' . $class . '">');
     }
 
-    public function open()
+    public function openForm()
     {
         echo('<form method="post">');
     }
@@ -40,9 +40,13 @@ class CFormCreator
         echo('<input type="submit" value="' . $label . '">');
     }
 
-    public function close()
+    public function closeForm()
     {
         echo('</form>');
+    }
+
+    public function closeDiv()
+    {
         echo('</div>');
     }
 

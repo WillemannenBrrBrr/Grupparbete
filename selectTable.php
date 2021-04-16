@@ -2,6 +2,8 @@
 
 require_once("include/CApp.php");
 
+$form = $app->getForm();
+
 $app->renderHeader("Bordsval"); 
 
 if(!empty($_POST))
@@ -31,17 +33,36 @@ if(!empty($_POST))
     
 }
 
-$app->getForm()->openDiv("personalInfo");
+$form->openDiv("mapMarkers");
+for($i = 1; $i <= 15; $i++)
+{
+    $query = "SELECT available FROM tables WHERE id='$i'";
+    $result = $app->getdb()->query($query);
+    $data = $result->fetch_assoc();
+
+    if($data["available"] == 1)
+    {
+        $color = "rgb(0,255,0,0.3)";
+    }
+    else
+    {
+        $color = "rgb(255,0,0,0.5)";
+    }
+
+    echo('<div class="marker' . $i . '" style="background-color:' . $color . '">' . $i . '</div>');
+}
+$form->closeDiv();
+
+$form->openDiv("personalInfo");
 echo('<img class="tableMap" src="img/Skiss_over_restaurang.png">');
-$app->getForm()->open();
-$app->getForm()->createInput("text", "name", "För/Efternamn");
-$app->getForm()->createInputTel("number", "Telefonnummer");
-$app->getForm()->createInput("email", "email", "E-Mail");
-$app->getForm()->createInputNumber("table", "Bord", "1", "15");
-$app->getForm()->createSubmit("Boka");
-$app->getForm()->close(); 
-
-
+$form->openForm();
+$form->createInput("text", "name", "För/Efternamn");
+$form->createInputTel("number", "Telefonnummer");
+$form->createInput("email", "email", "E-Mail");
+$form->createInputNumber("table", "Bord", "1", "15");
+$form->createSubmit("Boka");
+$form->closeForm();
+$form->closeDiv();
 
 $app->renderFooter(); 
 
