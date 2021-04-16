@@ -10,6 +10,11 @@ header{
     margin-bottom: 1rem;
 }
 
+nav.flexMenu{
+    display: flex;
+    justify-content: space-evenly ;
+}
+
 .content{
     background-color: #c2c1bd;
 }
@@ -24,10 +29,6 @@ a{
     text-align: center;
     color: 	#dbd2d2;
     text-decoration: none;
-}
-
-a:hover{
-    color: darkblue;
 }
 
 a:visited{
@@ -99,11 +100,6 @@ footer{
 
 @media screen and (min-width: 900px)
 {
-    nav.flexMenu{
-        display: flex;
-        justify-content: space-evenly ;
-    }
-
     .content{
         max-width: 90%;
         margin-bottom: 1rem;

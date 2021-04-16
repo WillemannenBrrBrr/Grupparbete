@@ -55,14 +55,10 @@ class CApp
     {
         ?>
             <div class="container">
-                <div class="flexContainer">
-                    <div class="openingHours"><a href="">Öppettider</a></div>
-                    <div class="menu"><a href="restaurantMenu.php">Se vår meny</a></div>
-                </div>
-                <div class="flexContainer">
-                    <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
-                    <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning <a href="alreadyBooked.php">här</a></div>
-                </div>
+                    <div class="flexContainer">
+                        <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
+                        <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning <a href="alreadyBooked.php">här</a></div>
+                    </div>
             </div>
         <?php
     }
