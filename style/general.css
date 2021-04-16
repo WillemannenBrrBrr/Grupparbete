@@ -3,21 +3,21 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0px;
 }
 
 header{
-    background-color: blanchedalmond;
+    margin-bottom: 1rem;
 }
 
 .content{
-    background-color: #efebde;
+    background-color: #c2c1bd;
 }
 
 .logo{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
 }
 
 a{
@@ -42,9 +42,14 @@ nav{
     background-color: #8b0000;
 }
 
-ul{
+
+ul, a#logo{
     display: flex;
-    justify-content: flex-end;
+}
+
+
+ul{
+    align-self: flex-end;
     list-style-type: none;
     margin: 1rem; 
     
@@ -213,8 +218,14 @@ footer{
 
 @media screen and (min-width: 900px)
 {
+    nav.flexMenu{
+        display: flex;
+        justify-content: space-evenly ;
+    }
+
     .content{
         max-width: 90%;
+        margin-bottom: 1rem;
         margin: 0 auto;
         padding: 2em;
     }
@@ -225,12 +236,10 @@ footer{
         justify-content: space-evenly;
     }
 
-    a#logo{
-        margin-right: 40em;
-    }
-    
     .logoFooter{
-        margin-left: 25em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .footerLeft{
