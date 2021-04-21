@@ -49,7 +49,7 @@ for($i = 1; $i <= 15; $i++)
         $color = "rgb(255,0,0,0.5)";
     }
 
-    echo('<div class="marker' . $i . '" style="background-color:' . $color . '">' . $i . '</div>');
+    echo('<div class="marker' . $i . '" style="background-color:' . $color . '">bord ' . $i . '</div>');
 }
 $form->closeDiv();
 

@@ -41,7 +41,12 @@ class CDatabase
 		return $result;
 	}
 
-
+	public function unbook($id, $name, $number, $email)
+	{
+		$query= "UPDATE tables SET available=0 WHERE id='$id'";
+    	$this->query($query);
+    	$query= "DELETE FROM booking WHERE namn='$name' AND nummer='$number' AND email='$email'";
+	}
 
     ///////////////////
     private $m_settings = [];
