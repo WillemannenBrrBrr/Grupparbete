@@ -9,6 +9,12 @@ function print_r_pre($data)
     echo('</pre>');
 }
 
+function redirect(string $url)
+{
+	header("location: $url");
+	die();
+}
+
 class CApp
 {
     public function __construct()

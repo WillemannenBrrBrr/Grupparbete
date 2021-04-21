@@ -19,7 +19,7 @@ if(!empty($_POST))
         echo("Din bokning" . "<br/>");
         echo("Namn: " . $data["namn"] . "<br/>");
         echo("Bord: " . $data["bord"] . "<br/>");
-        echo('<button class="unbook" onclick="' . $app->getdb()->unbook($data["bord"], $name, $number, $email) . '">Avboka</button>');
+        echo('<a class="unbook" href="unbook.php?bord=' . $data["bord"] . '&namn=' . $name . '&nummer=' . $number . '&email=' . $email . '">Avboka här</a>');
     }
     else
     {
