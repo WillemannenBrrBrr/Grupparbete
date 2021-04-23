@@ -32,6 +32,9 @@ if(!empty($_POST))
     }
 }
 
+
+
+$form->openDiv("personalInfo");
 $form->openDiv("mapMarkers");
 for($i = 1; $i <= 15; $i++)
 {
@@ -41,11 +44,11 @@ for($i = 1; $i <= 15; $i++)
 
     if($data["available"] == 1)
     {
-        $color = "rgb(0,255,0,0.3)";
+        $color = "rgb(50,255,50)";
     }
     else
     {
-        $color = "rgb(255,0,0,0.5)";
+        $color = "rgb(255,50,50)";
     }
     
     if($i == 1 || $i == 2)
@@ -65,12 +68,9 @@ for($i = 1; $i <= 15; $i++)
         $tableInfo = $i ."</br>" . "5p";
     }
 
-    echo('<div class="marker' . $i . '" style="background-color:' . $color . '">bord ' . $tableInfo . '</div>');
+    echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $tableInfo . '</div>');
 }
 $form->closeDiv();
-
-$form->openDiv("personalInfo");
-echo('<img class="tableMap" src="img/Skiss_over_restaurang.png">');
 $form->openForm();
 $form->createInput("text", "name", "För/Efternamn");
 $form->createInputTel("number", "Telefonnummer");
