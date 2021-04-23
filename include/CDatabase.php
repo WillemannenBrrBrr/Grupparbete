@@ -41,9 +41,8 @@ class CDatabase
 		return $result;
 	}
 
-
-
-    ///////////////////
+    ////////////////////////////////
+	//variabler
     private $m_settings = [];
     private $m_connection = null;
 };

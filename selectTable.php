@@ -30,7 +30,6 @@ if(!empty($_POST))
         $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
         $app->getdb()->query($query);
     }
-    
 }
 
 $form->openDiv("mapMarkers");
@@ -49,7 +48,7 @@ for($i = 1; $i <= 15; $i++)
         $color = "rgb(255,0,0,0.5)";
     }
 
-    echo('<div class="marker' . $i . '" style="background-color:' . $color . '">' . $i . '</div>');
+    echo('<div class="marker' . $i . '" style="background-color:' . $color . '"></div>');
 }
 $form->closeDiv();
 
