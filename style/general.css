@@ -6,17 +6,17 @@ body{
     margin: 0px;
 }
 
-header{
-    margin-bottom: 1rem;
-}
-
 nav.flexMenu{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1em;
 }
 
 .content{
     background-color: #c2c1bd;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+    padding: 2em;
 }
 
 .logo{
@@ -61,11 +61,11 @@ li:hover{
     background-color: #6e0101;
 }
 
-p, h3{
+p, h2{
     text-align: center;
 }
 
-p, a, li, h3{
+p, a, li, h2{
     color: #16120a;
 }
 
@@ -106,9 +106,7 @@ footer{
 {
     .content{
         max-width: 90%;
-        margin-bottom: 1rem;
-        margin: 0 auto;
-        padding: 2em;
+        min-height: 400px;
     }
 
     .flexContainer{
@@ -254,6 +252,10 @@ footer{
         margin-right: auto;
     }
     
+    .alreadyBookedForm{
+
+    }
+
     .footerLeft{
         grid-column: 1;
     }
