@@ -12,7 +12,7 @@ header{
 
 nav.flexMenu{
     display: flex;
-    justify-content: space-evenly ;
+    justify-content: space-between;
 }
 
 .content{
@@ -33,10 +33,6 @@ a{
 
 a:visited{
     color: 	#010101;
-}
-
-a#logo{
-
 }
 
 nav{
@@ -65,6 +61,14 @@ li:hover{
     background-color: #6e0101;
 }
 
+p, h3{
+    text-align: center;
+}
+
+p, a, li, h3{
+    color: #16120a;
+}
+
 .unbook{
     color:blue;
 }
@@ -76,6 +80,12 @@ li:hover{
 footer{
     margin-top: 1em;
     background-color: #8b0000;
+}
+
+.logoFooter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 600px)

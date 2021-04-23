@@ -75,6 +75,8 @@ class CApp
         </section>
         <footer>
             <img src="img/logoFooter.png" alt="Logga Footer" class="logoFooter">
+            <p>Bosses Restaurang | Stenmarksvägen 13 | 0240-34721 | bosses@restaurang.se </p>
+            <p>Copyright © Bosses Restaurang -2021</p>
         </footer>
         <script src="script/tools.js"></script>
         </body>
