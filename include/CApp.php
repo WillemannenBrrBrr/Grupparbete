@@ -62,7 +62,7 @@ class CApp
         ?>
             <div class="container">
                     <div class="flexContainer">
-                        <div class="bookTable"><a href="selectTable.php">Boka nu</a></div>
+                        <div class="bookTable"><a href="selectDate.php">Boka nu</a></div>
                         <div class="alreadyBooked">Har du redan bokat ett bord? Se din bokning <a href="alreadyBooked.php">här</a></div>
                     </div>
             </div>

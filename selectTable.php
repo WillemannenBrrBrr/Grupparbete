@@ -8,6 +8,8 @@ $app->renderHeader("Bordsval");
 
 if(!empty($_POST))
 {
+    $date = $_GET["date"];
+    $time = $_GET["time"];
     $name = $_POST["name"];
     $number = $_POST["number"];
     $email = $_POST["email"];
@@ -23,8 +25,8 @@ if(!empty($_POST))
     }
     else 
     {
-        $query = "INSERT INTO `booking` (`namn`, `nummer`, `email`, `bord`) 
-        VALUES ('$name', '$number', '$email', '$table')";
+        $query = "INSERT INTO booking (`date`, `time`, namn, nummer, email, bord) 
+        VALUES ('$date', '$time', '$name', '$number', '$email', '$table')";
         $app->getdb()->query($query);
         
         $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";

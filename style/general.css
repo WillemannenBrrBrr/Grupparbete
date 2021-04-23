@@ -123,6 +123,7 @@ footer{
 
     .mapMarker, .marker{
         display:block;
+        text-align: center;
     }
     
     .mapMarkers{
@@ -131,7 +132,6 @@ footer{
         grid-template-rows: repeat(4 auto);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
-        text-align: center;
         align-items: center;
         justify-items: center;
     }
