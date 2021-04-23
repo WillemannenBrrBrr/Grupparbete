@@ -47,8 +47,25 @@ for($i = 1; $i <= 15; $i++)
     {
         $color = "rgb(255,0,0,0.5)";
     }
+    
+    if($i == 1 || $i == 2)
+    {
+        $tableInfo = $i ."</br>" . "6p";
+    }
+    else if($i == 3 || $i == 4 || $i == 5 || $i == 6 || $i == 8 || $i == 9)
+    {
+        $tableInfo = $i ."</br>" . "4p";
+    }
+    else if($i == 7 || $i == 10 || $i == 11 || $i == 12 || $i == 14 || $i == 15)
+    {
+        $tableInfo = $i ."</br>" . "2p";
+    }
+    if($i == 13)
+    {
+        $tableInfo = $i ."</br>" . "5p";
+    }
 
-    echo('<div class="marker' . $i . '" style="background-color:' . $color . '"></div>');
+    echo('<div class="marker' . $i . '" style="background-color:' . $color . '">bord ' . $tableInfo . '</div>');
 }
 $form->closeDiv();
 

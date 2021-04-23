@@ -29,8 +29,8 @@ if(!empty($_POST))
 
 $app->getForm()->openForm("alreadyBookedForm");
 $app->getForm()->createInput("text", "name", "För- och Efternamn");
-$app->getForm()->createInput("email", "email", "E-mail");
 $app->getForm()->createInputTel("number", "Telefonnummer");
+$app->getForm()->createInput("email", "email", "E-mail");
 $app->getForm()->createSubmit("Se din bokning");
 $app->getForm()->closeForm();
 $app->getForm()->closeDiv();

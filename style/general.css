@@ -86,6 +86,8 @@ p, a, li, h3{
     width: 600px;
     height: 480px;
     text-align: center;
+    align-items: center;
+    justify-items: center;
     position: absolute;
 }
 
