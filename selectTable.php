@@ -30,7 +30,6 @@ if(!empty($_POST))
         $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
         $app->getdb()->query($query);
     }
-    
 }
 
 $form->openDiv("mapMarkers");
