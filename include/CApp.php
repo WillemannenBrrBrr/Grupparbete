@@ -40,6 +40,7 @@ class CApp
         </head>
         <body>
         <header>
+            <i id="showMenuIcon" class="fas fa-bars"></i>
         </header>
         <nav class="flexMenu">
             <a id="logo" href="index.php"><img src="img/logoNav.png" alt="Logga Meny"></a>
