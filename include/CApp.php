@@ -42,8 +42,11 @@ class CApp
         <header>
         </header>
         <nav class="flexMenu">
+            <span class="navbarResponsive" id="navbarResponsive">
+                <i class="fas fa-bars"></i>
+            </span>
             <a id="logo" href="index.php"><img src="img/logoNav.png" alt="Logga Meny"></a>
-            <ul>
+            <ul class="mainNav">
                 <li><a href="restaurantMenu.php">Meny</a></li>
                 <li><a href="openingHours.php">Öppettider</a></li>
                 <li><a href="contact.php">Kontakt</a></li>

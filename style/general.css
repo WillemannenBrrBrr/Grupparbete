@@ -39,6 +39,13 @@ nav{
     background-color: #8b0000;
 }
 
+ul.mainNav{
+    list-style-type: none;
+    display: none;
+}
+
+.navbarResponsive{
+}
 
 ul, a#logo{
     display: flex;
