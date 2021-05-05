@@ -10,7 +10,7 @@ if(!empty($_POST))
     $email = $_POST["email"];
 
     
-    $query = "SELECT `date`, `time`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
+    $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
     
@@ -19,8 +19,7 @@ if(!empty($_POST))
         echo("Din bokning" . "<br/>");
         echo("Namn: " . $data["namn"] . "<br/>");
         echo("Bord: " . $data["bord"] . "<br/>");
-        echo("Datum: " . $data["date"] . "<br/>");
-        echo("Tid: " . $data["time"] . "<br/>");
+        echo("Datum: " . date('d-m-Y H:i', $data['unix timestamp']) . "<br/>");
         echo('<a class="unbook" href="unbook.php?bord=' . $data["bord"] . '&namn=' . $name . '&nummer=' . $number . '&email=' . $email . '">Avboka här</a>');
     }
     else

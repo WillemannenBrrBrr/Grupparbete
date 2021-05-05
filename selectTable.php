@@ -8,8 +8,7 @@ $app->renderHeader("Bordsval");
 
 if(!empty($_POST))
 {
-    $date = $_GET["date"];
-    $time = $_GET["time"];
+    $unixTimestamp = $_GET["dateAndTime"];
     $name = $_POST["name"];
     $number = $_POST["number"];
     $email = $_POST["email"];
@@ -18,15 +17,15 @@ if(!empty($_POST))
     $query = "SELECT `available` FROM `tables` WHERE id = $table";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
-    
+
     if($data["available"] == 0)
     {
         echo("bordet är redan bokat");
     }
     else 
     {
-        $query = "INSERT INTO booking (`date`, `time`, namn, nummer, email, bord) 
-        VALUES ('$date', '$time', '$name', '$number', '$email', '$table')";
+        $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord) 
+        VALUES ('$unixTimestamp', '$name', '$number', '$email', '$table')";
         $app->getdb()->query($query);
         
         $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
@@ -78,6 +77,7 @@ $form->createInput("text", "name", "För/Efternamn");
 $form->createInputTel("number", "Telefonnummer");
 $form->createInput("email", "email", "E-Mail");
 $form->createInputNumber("table", "Bord", "1", "15");
+$form->createInputNumber("people", "Antal folk", "1", "6");
 $form->createSubmit("Boka");
 $form->closeForm();
 $form->closeDiv();
