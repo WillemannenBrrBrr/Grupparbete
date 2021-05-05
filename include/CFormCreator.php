@@ -17,6 +17,11 @@ class CFormCreator
         echo('<form method="post">');
     }
 
+    public function createInputTime()
+    {
+        
+    }
+
     public function createInput(string $type, string $name, string $label)
     {
         echo('<label for="' . $name . '">' . $label . ':</label>');

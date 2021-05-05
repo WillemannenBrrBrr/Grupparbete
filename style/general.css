@@ -76,142 +76,12 @@ p, a, li, h2{
     color: #16120a;
 }
 
-.personalInfo{
-    display: flex;
-}
-
-.tableMap{
-    width: 600px;
-}
-
-.mapMarkers{
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(4 auto);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    width: 600px;
-    height: 480px;
-    text-align: center;
-    align-items: center;
-    justify-items: center;
-    position: absolute;
-}
-
-.marker1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 1;
-    width: 300px;
-    height: 75px;
-}
-.marker2{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row: 1;
-    width: 300px;
-    height: 75px;
-}
-.marker3{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 2;
-    width: 200px;
-    height: 75px;
-}
-.marker4{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 2;
-    width: 200px;
-    height: 75px;
-}
-.marker5{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row: 2;
-    width: 200px;
-    height: 75px;
-}
-.marker6{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row: 2;
-    width: 200px;
-    height: 75px;
-}
-.marker7{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 3;
-    width: 100px;
-    height: 75px;
-}
-.marker8{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 3;
-    width: 200px;
-    height: 75px;
-}
-.marker9{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row: 3;
-    width: 200px;
-    height: 75px;
-}
-.marker10{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row: 3;
-    width: 100px;
-    height: 75px;
-}
-.marker11{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 4;
-    width: 100px;
-    height: 75px;
-}
-.marker12{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 4;
-    width: 100px;
-    height: 75px;
-}
-.marker13{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row: 4;
-    width: 150px;
-    height: 150px;
-    border-radius: 80px;
-}
-.marker14{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row: 4;
-    width: 100px;
-    height: 75px;
-}
-.marker15{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row: 4;
-    width: 100px;
-    height: 75px;
-}
-
-.personalInfo form{
-    width: 50px;
-    margin-left: 50px;
-}
-
 .unbook{
     color:blue;
+}
+
+.mapMarkers, .marker{
+    display: none;
 }
 
 footer{
@@ -250,6 +120,143 @@ footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+
+    .personalInfo{
+        display: flex;
+    }
+
+    .mapMarker, .marker{
+        display:block;
+        text-align: center;
+    }
+    
+    .mapMarkers{
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(4 auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .marker.table1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1;
+        width: 300px;
+        height: 75px;
+    }
+    .marker.table2{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row: 1;
+        width: 300px;
+        height: 75px;
+    }
+    .marker.table3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
+        width: 200px;
+        height: 75px;
+    }
+    .marker.table4{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 2;
+        width: 200px;
+        height: 75px;
+    }
+    .marker.table5{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row: 2;
+        width: 200px;
+        height: 75px;
+    }
+    .marker.table6{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row: 2;
+        width: 200px;
+        height: 75px;
+    }
+    .marker.table7{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 3;
+        width: 100px;
+        height: 75px;
+    }
+    .marker.table8{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 3;
+        width: 200px;
+        height: 75px;
+    }
+    .marker.table9{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row: 3;
+        width: 200px;
+        height: 75px;
+    }
+    .marker.table10{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row: 3;
+        width: 100px;
+        height: 75px;
+    }
+    .marker.table11{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 4;
+        width: 100px;
+        height: 75px;
+    }
+    .marker.table12{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 4;
+        width: 100px;
+        height: 75px;
+    }
+    .marker.table13{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 4;
+        width: 150px;
+        height: 150px;
+        border-radius: 80px;
+    }
+    .marker.table14{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row: 4;
+        width: 100px;
+        height: 75px;
+    }
+    .marker.table15{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row: 4;
+        width: 100px;
+        height: 75px;
+    }
+    
+    .personalInfo form{
+        width: 50px;
+        margin-left: 50px;
+    }
+
+    .logoFooter{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .alreadyBookedForm{
