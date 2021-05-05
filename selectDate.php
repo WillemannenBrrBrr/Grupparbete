@@ -7,7 +7,7 @@ $app->renderHeader("Välj tid och datum");
 
 if(!empty($_POST))
 {
-    redirect("selectTable.php?date=" . $_POST["date"] . " &time=" . $_POST["time"] . "");
+    redirect("selectTable.php?dateAndTime=". strtotime($_POST["date"] . $_POST["time"]) . "");
 }
 
 $form->openDiv("dateAndTime");
