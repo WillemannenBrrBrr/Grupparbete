@@ -6,9 +6,10 @@ $form = $app->getForm();
 
 $app->renderHeader("Bordsval"); 
 
+$unixTimestamp = $_GET["dateAndTime"];
+
 if(!empty($_POST))
 {
-    $unixTimestamp = $_GET["dateAndTime"];
     $name = $_POST["name"];
     $number = $_POST["number"];
     $email = $_POST["email"];
@@ -33,12 +34,13 @@ if(!empty($_POST))
     }
 }
 
-
-
 $form->openDiv("personalInfo");
 $form->openDiv("mapMarkers");
 for($i = 1; $i <= 15; $i++)
 {
+    $query = "SELECT `unix timestamp`, bord FROM booking WHERE `unix timestamp` < ($unixTimestamp - 7200) /* OR `unix timestamp` > ($unixTimestamp + 7200) */";
+    $matchingTime = $app->getdb()->query($query);
+
     $query = "SELECT available FROM tables WHERE id='$i'";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
