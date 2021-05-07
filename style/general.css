@@ -87,7 +87,14 @@ p, a, li, h2{
 }
 
 .responsiveMenu{
-    max-width: 85%;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.responsiveOpeningHours{
+    margin: 0 auto;
+    max-width: 50%;
     display: flex;
     flex-wrap: wrap;
 }
