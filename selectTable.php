@@ -6,13 +6,15 @@ $form = $app->getForm();
 
 $app->renderHeader("Bordsval"); 
 
+$selectedTime = $_GET["dateAndTime"];
+
 if(!empty($_POST))
 {
-    $unixTimestamp = $_GET["dateAndTime"];
     $name = $_POST["name"];
     $number = $_POST["number"];
     $email = $_POST["email"];
     $table = $_POST["table"];
+    $amount = $_POST["people"];
 
     $query = "SELECT `available` FROM `tables` WHERE id = $table";
     $result = $app->getdb()->query($query);
@@ -25,7 +27,7 @@ if(!empty($_POST))
     else 
     {
         $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord) 
-        VALUES ('$unixTimestamp', '$name', '$number', '$email', '$table')";
+        VALUES ('$selectedTime', '$name', '$number', '$email', '$table')";
         $app->getdb()->query($query);
         
         $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
@@ -33,13 +35,15 @@ if(!empty($_POST))
     }
 }
 
-
-
 $form->openDiv("personalInfo");
 $form->openDiv("mapMarkers");
 for($i = 1; $i <= 15; $i++)
 {
-    $query = "SELECT available FROM tables WHERE id='$i'";
+    $query = "SELECT `unix timestamp`, bord FROM booking WHERE bord = $i";
+    $matchingTime = $app->getdb()->query($query);
+    $timeData = $matchingTime->fetch_assoc();
+
+    $query = "SELECT available FROM tables WHERE id = $i";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
 

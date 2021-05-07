@@ -1,7 +1,6 @@
 <?php
 require_once("CFormCreator.php");
 require_once("CDatabase.php");
-require_once("CPickFittingTable.php");
 
 function print_r_pre($data)
 {
@@ -22,7 +21,6 @@ class CApp
     {
         $this->m_formCreator = new CFormCreator($this);
         $this->m_db = new CDatabase($this);
-        $this->m_pft = new CPickFittingTable($this);
     }
 
     public function renderHeader(string $title)
@@ -92,13 +90,11 @@ class CApp
 
     public function &getForm()      { return $this->m_formCreator; }
     public function &getDB()        { return $this->m_db; }
-    public function &getPFT()       { return $this->m_pft; }
 
     //////////////////////////////////////////////////
     //variables
     private $m_formCreator = null;
     private $m_db = null;
-    private $m_pft = null;
 
 };
 
