@@ -35,45 +35,54 @@ if(!empty($_POST))
     }
 }
 
+$query = "SELECT `unix timestamp`, bord FROM booking WHERE 1";
+$bookingInfo = $app->getdb()->query($query);
+$timeAndTable = $bookingInfo->fetch_assoc();
+
+$query = "SELECT id, available FROM tables WHERE 1";
+$result = $app->getdb()->query($query);
+$tableInfo = $result->fetch_assoc();
+
+if($bookingInfo->num_rows > 0)
+{
+    for($i = 0; $i < $bookingInfo->num_rows; $i++)
+    {
+        if($selectedTime > ($timeAndTable["unix timestamp"] - 7200) && $selectedTime < ($timeAndTable["unix timestamp"] + 7200))
+        {
+            if($timeAndTable["bord"] == $tableInfo["id"])
+            {
+                $color = "rgb(255,50,50)";
+            }
+            else
+            {
+                $color = "rgb(50,255,50)";
+            }
+        }
+    }
+}
+
 $form->openDiv("personalInfo");
 $form->openDiv("mapMarkers");
 for($i = 1; $i <= 15; $i++)
-{
-    $query = "SELECT `unix timestamp`, bord FROM booking WHERE bord = $i";
-    $matchingTime = $app->getdb()->query($query);
-    $timeData = $matchingTime->fetch_assoc();
-
-    $query = "SELECT available FROM tables WHERE id = $i";
-    $result = $app->getdb()->query($query);
-    $data = $result->fetch_assoc();
-
-    if($data["available"] == 1)
-    {
-        $color = "rgb(50,255,50)";
-    }
-    else
-    {
-        $color = "rgb(255,50,50)";
-    }
-    
+{   
     if($i == 1 || $i == 2)
     {
-        $tableInfo = $i ."</br>" . "6p";
+        $peoplePerTable = $i ."</br>" . "6p";
     }
     else if($i == 3 || $i == 4 || $i == 5 || $i == 6 || $i == 8 || $i == 9)
     {
-        $tableInfo = $i ."</br>" . "4p";
+        $peoplePerTable = $i ."</br>" . "4p";
     }
     else if($i == 7 || $i == 10 || $i == 11 || $i == 12 || $i == 14 || $i == 15)
     {
-        $tableInfo = $i ."</br>" . "2p";
+        $peoplePerTable = $i ."</br>" . "2p";
     }
     if($i == 13)
     {
-        $tableInfo = $i ."</br>" . "5p";
+        $peoplePerTable = $i ."</br>" . "5p";
     }
 
-    echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $tableInfo . '</div>');
+    echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $peoplePerTable . '</div>');
 }
 $form->closeDiv();
 $form->openForm();
