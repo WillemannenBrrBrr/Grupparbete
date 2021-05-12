@@ -82,7 +82,7 @@ for($i = 1; $i <= 15; $i++)
         $peoplePerTable = $i ."</br>" . "5p";
     }
 
-    echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $peoplePerTable . '</div>');
+    echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">Bord ' . $peoplePerTable . '</div>');
 }
 $form->closeDiv();
 $form->openForm();
