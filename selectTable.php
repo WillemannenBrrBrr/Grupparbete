@@ -22,7 +22,7 @@ if(!empty($_POST))
 
     if($data["available"] == 0)
     {
-        echo("bordet är redan bokat");
+        echo("Bordet är redan bokat");
     }
     else 
     {
@@ -91,7 +91,7 @@ $form->createInputTel("number", "Telefonnummer");
 $form->createInput("email", "email", "E-Mail");
 $form->createInputNumber("table", "Bord", "1", "15");
 $form->createInputNumber("people", "Antal folk", "1", "6");
-$form->createSubmit("Boka");
+$form->createSubmit("Boka bord");
 $form->closeForm();
 $form->closeDiv();
 
