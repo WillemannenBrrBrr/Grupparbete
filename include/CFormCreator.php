@@ -29,7 +29,7 @@ class CFormCreator
     {
         echo('<div class="flexForm">');
         echo('<label for="' . $name . '">' . $label . ':</label>');
-        echo('<input type="tel" name="' . $name . '" id="' . $name . '" pattern="[0-9]{10}">');
+        echo('<input type="tel" name="' . $name . '" id="' . $name . '" pattern="[0-9]{10}" required>');
         echo('</div>');
     }
 
@@ -37,7 +37,7 @@ class CFormCreator
     {
         echo('<div class="flexForm">');
         echo('<label for="' . $name . '">' . $label . ':</label>');
-        echo('<input type="number" name="' . $name . '" id="' . $name . '" min="' . $min . '" max="' . $max . '">');
+        echo('<input type="number" name="' . $name . '" id="' . $name . '" min="' . $min . '" max="' . $max . '" required>');
         echo('</div>');
     }
 

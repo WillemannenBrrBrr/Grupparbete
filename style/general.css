@@ -86,9 +86,12 @@ p, a, li, h2{
     color: #16120a;
 }
 
+.sideBySide{
+    display: flex;
+}
+
 .responsiveMenu{
     max-width: 50%;
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -202,8 +205,9 @@ footer{
         
     }
 
-    .mainNav{
-
+    .responsiveMenu{
+        max-width: 50%;
+        flex-wrap: wrap;
     }
 
     .navbarResponsive{
