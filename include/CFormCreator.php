@@ -21,7 +21,7 @@ class CFormCreator
     {
         echo('<div class="flexForm">');
         echo('<label for="' . $name . '">' . $label . ':</label>');
-        echo('<input type="' . $type . '" name="' . $name . '" id="' . $name . '">');
+        echo('<input type="' . $type . '" name="' . $name . '" id="' . $name . '" required>');
         echo('</div>');
     }
 
