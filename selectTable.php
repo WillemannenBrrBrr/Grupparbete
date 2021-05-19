@@ -37,7 +37,12 @@ if(!empty($_POST))
 
 $query = "SELECT `unix timestamp`, bord FROM booking WHERE 1";
 $bookingInfo = $app->getdb()->query($query);
-$timeAndTable = $bookingInfo->fetch_assoc();
+
+$orders = [];
+while($timeAndTable = $bookingInfo->fetch_assoc())
+{
+    $orders[] = $timeAndTable;
+}
 
 $query = "SELECT available FROM tables WHERE 1";
 $result = $app->getdb()->query($query);
@@ -48,24 +53,18 @@ $form->openDiv("mapMarkers");
 
 for($i = 1; $i <= 15; $i++)
 {
-    if($bookingInfo->num_rows != 0)
+    $color = "rgb(50,255,50)";
+
+    foreach($orders as $timeAndTable)
     {
-        for($j = 1; $j <= $bookingInfo->num_rows; $j++)
+        if($timeAndTable["bord"] == $i)
         {
-            if($timeAndTable["bord"] == $i)
+            if($selectedTime > ($timeAndTable["unix timestamp"] - 7200) && $selectedTime < ($timeAndTable["unix timestamp"] + 7200))
             {
-                if($selectedTime > ($timeAndTable["unix timestamp"] - 7200) && $selectedTime < ($timeAndTable["unix timestamp"] + 7200))
-                {
-                    $color = "rgb(255,50,50)";
-                }   
-            }
-            else
-            {
-                $color = "rgb(50,255,50)";
-            }
+                $color = "rgb(255,50,50)";
+            }   
         }
     }
-    
 
     if($i == 1 || $i == 2)
     {
