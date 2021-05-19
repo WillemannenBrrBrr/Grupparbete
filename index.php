@@ -6,11 +6,16 @@ $app->renderStart();
 
 $query = "SELECT id, `unix timestamp`, bord FROM booking WHERE 1";
 $result = $app->getdb()->query($query);
-$data = $result->fetch_assoc();
+
+$orders = [];
+while($data = $result->fetch_assoc())
+{
+    $orders[] = $data;
+}
 
 if($result->num_rows != 0)
 {
-    for($i = 1; $i <= $result->num_rows; $i++)
+    foreach($orders as $data)
     {
         if(($data["unix timestamp"] + 7200) < time())
         {
