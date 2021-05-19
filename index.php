@@ -10,7 +10,7 @@ $data = $result->fetch_assoc();
 
 if($result->num_rows != 0)
 {
-   for($i = 1; $i <= $result->num_rows; $i++)
+    for($i = 1; $i <= $result->num_rows; $i++)
     {
         if(($data["unix timestamp"] + 7200) < time())
         {
