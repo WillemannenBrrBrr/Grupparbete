@@ -46,44 +46,45 @@ $tableInfo = $result->fetch_assoc();
 $form->openDiv("personalInfo");
 $form->openDiv("mapMarkers");
 
-if($bookingInfo->num_rows != 0)
+for($i = 1; $i <= 15; $i++)
 {
-    for($i = 1; $i < $bookingInfo->num_rows; $i++)
+    if($bookingInfo->num_rows != 0)
     {
-        if($timeAndTable["bord"] == $i)
+        for($j = 1; $j <= $bookingInfo->num_rows; $j++)
         {
-            if($selectedTime > ($timeAndTable["unix timestamp"] - 7200) && $selectedTime < ($timeAndTable["unix timestamp"] + 7200))
+            if($timeAndTable["bord"] == $i)
             {
-                $color = "rgb(255,50,50)";
-            }   
-        }
-        else
-        {
-            $color = "rgb(50,255,50)";
-        }
-
-        for($i = 1; $i <= 15; $i++)
-        {
-            if($i == 1 || $i == 2)
-            {
-                $peoplePerTable = $i ."</br>" . "6p";
+                if($selectedTime > ($timeAndTable["unix timestamp"] - 7200) && $selectedTime < ($timeAndTable["unix timestamp"] + 7200))
+                {
+                    $color = "rgb(255,50,50)";
+                }   
             }
-            else if($i == 3 || $i == 4 || $i == 5 || $i == 6 || $i == 8 || $i == 9)
+            else
             {
-                $peoplePerTable = $i ."</br>" . "4p";
+                $color = "rgb(50,255,50)";
             }
-            else if($i == 7 || $i == 10 || $i == 11 || $i == 12 || $i == 14 || $i == 15)
-            {
-                $peoplePerTable = $i ."</br>" . "2p";
-            }
-            else if($i == 13)
-            {
-                $peoplePerTable = $i ."</br>" . "5p";
-            }
-        
-            echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $peoplePerTable . '</div>');
         }
     }
+    
+
+    if($i == 1 || $i == 2)
+    {
+        $peoplePerTable = $i ."</br>" . "6p";
+    }
+    else if($i == 3 || $i == 4 || $i == 5 || $i == 6 || $i == 8 || $i == 9)
+    {
+        $peoplePerTable = $i ."</br>" . "4p";
+    }
+    else if($i == 7 || $i == 10 || $i == 11 || $i == 12 || $i == 14 || $i == 15)
+    {
+        $peoplePerTable = $i ."</br>" . "2p";
+    }
+    else if($i == 13)
+    {
+        $peoplePerTable = $i ."</br>" . "5p";
+    }
+
+    echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $peoplePerTable . '</div>');
 }
 
 $form->closeDiv();
