@@ -2,13 +2,10 @@
 
 require_once("include/CApp.php");
 
-$form = $app->getForm();
-
 $app->renderHeader("Bordsval"); 
 
+$form = $app->getForm();
 $selectedTime = $_GET["dateAndTime"];
-
-/*  */
 
 $query = "SELECT `unix timestamp`, bord FROM booking WHERE 1";
 $bookingInfo = $app->getdb()->query($query);
