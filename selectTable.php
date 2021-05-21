@@ -72,6 +72,8 @@ if(!empty($_POST))
         $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord) 
         VALUES ('$selectedTime', '$name', '$number', '$email', '$table')";
         $app->getdb()->query($query);
+
+        redirect("verification.php?table=$table&time=$selectedTime");
     }
 }
 
