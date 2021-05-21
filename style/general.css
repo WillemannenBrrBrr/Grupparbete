@@ -150,7 +150,7 @@ input[type=submit]:hover{
     display: none;
 }
 
-.personalInfo input:nth-of-type(4), .personalInfo label:nth-of-type(4){
+.flexForm:nth-of-type(4){
     display: none;
 }
 
@@ -356,10 +356,10 @@ footer{
         margin-left: 50px;
     }
 
-    .personalInfo input:nth-of-type(5), .personalInfo label:nth-of-type(5){
+    .flexForm:nth-of-type(5){
         display: none;
     }
-    .personalInfo input:nth-of-type(4), .personalInfo label:nth-of-type(4){
+    .flexForm:nth-of-type(4){
         display: block;
     }
     

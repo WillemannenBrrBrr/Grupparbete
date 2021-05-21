@@ -19,9 +19,6 @@ if($result->num_rows != 0)
     {
         if(($data["unix timestamp"] + 7200) < time())
         {
-            $query = "UPDATE tables SET available=1 WHERE id = " . $data["bord"] . "";
-            $app->getdb()->query($query);
-
             $query = "DELETE FROM booking WHERE id = " . $data["id"] . "";
             $app->getdb()->query($query);
         }

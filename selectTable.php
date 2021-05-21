@@ -8,32 +8,7 @@ $app->renderHeader("Bordsval");
 
 $selectedTime = $_GET["dateAndTime"];
 
-if(!empty($_POST))
-{
-    $name = $_POST["name"];
-    $number = $_POST["number"];
-    $email = $_POST["email"];
-    $table = $_POST["table"];
-    $amount = $_POST["people"];
-
-    $query = "SELECT `available` FROM `tables` WHERE id = $table";
-    $result = $app->getdb()->query($query);
-    $data = $result->fetch_assoc();
-
-    if($data["available"] == 0)
-    {
-        echo("Bordet är redan bokat");
-    }
-    else 
-    {
-        $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord) 
-        VALUES ('$selectedTime', '$name', '$number', '$email', '$table')";
-        $app->getdb()->query($query);
-        
-        $query = "UPDATE `tables` SET `available`= 0 WHERE id = $table";
-        $app->getdb()->query($query);
-    }
-}
+/*  */
 
 $query = "SELECT `unix timestamp`, bord FROM booking WHERE 1";
 $bookingInfo = $app->getdb()->query($query);
@@ -43,10 +18,6 @@ while($timeAndTable = $bookingInfo->fetch_assoc())
 {
     $orders[] = $timeAndTable;
 }
-
-$query = "SELECT available FROM tables WHERE 1";
-$result = $app->getdb()->query($query);
-$tableInfo = $result->fetch_assoc();
 
 $form->openDiv("personalInfo");
 $form->openDiv("mapMarkers");
@@ -62,7 +33,8 @@ for($i = 1; $i <= 15; $i++)
             if($selectedTime > ($timeAndTable["unix timestamp"] - 7200) && $selectedTime < ($timeAndTable["unix timestamp"] + 7200))
             {
                 $color = "rgb(255,50,50)";
-            }   
+                $booked = $i;
+            }
         }
     }
 
@@ -84,6 +56,26 @@ for($i = 1; $i <= 15; $i++)
     }
 
     echo('<div class="marker table' . $i . '" style="background-color:' . $color . '">bord ' . $peoplePerTable . '</div>');
+}
+
+if(!empty($_POST))
+{
+    $name = $_POST["name"];
+    $number = $_POST["number"];
+    $email = $_POST["email"];
+    $table = $_POST["table"];
+    $amount = $_POST["people"];
+
+    if(isset($booked) && $table == $booked)
+    {
+        echo("Bordet är redan bokat");
+    }
+    else
+    {
+        $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord) 
+        VALUES ('$selectedTime', '$name', '$number', '$email', '$table')";
+        $app->getdb()->query($query);
+    }
 }
 
 $form->closeDiv();

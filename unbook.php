@@ -15,8 +15,6 @@ else
     throw new Exception("allt är inte ifyllt");
 }
 
-$query= "UPDATE tables SET available= 1 WHERE id='$tableId'";
-$app->getdb()->query($query);
 $query= "DELETE FROM booking WHERE namn='$name' AND nummer='$number' AND email='$email'";
 $app->getdb()->query($query);
 
