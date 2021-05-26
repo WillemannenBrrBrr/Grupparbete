@@ -61,7 +61,6 @@ if(!empty($_POST))
     $number = $_POST["number"];
     $email = $_POST["email"];
     $table = $_POST["table"];
-    $amount = $_POST["people"];
 
     if(isset($booked) && $table == $booked)
     {
@@ -83,7 +82,6 @@ $form->createInput("text", "name", "För/Efternamn");
 $form->createInputTel("number", "Telefonnummer");
 $form->createInput("email", "email", "E-Mail");
 $form->createInputNumber("table", "Bord", "1", "15");
-$form->createInputNumber("people", "Antal folk", "1", "6");
 $form->createSubmit("Boka bord");
 $form->closeForm();
 $form->closeDiv();

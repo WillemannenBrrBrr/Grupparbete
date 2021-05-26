@@ -121,7 +121,7 @@ form{
     padding: 1rem;
 }
 
-input[type=text], input[type=date], input[type=time], input[type=email], input[type=tel], input[input=number]{
+input[type=text], input[type=date], input[type=time], input[type=email], input[type=tel], input[type=number], input[type=password]{
     width: 70%;
     border-radius: 3px;
     padding: 0.5rem;
