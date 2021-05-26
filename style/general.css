@@ -22,6 +22,11 @@ nav.flexMenu{
     padding: 2em;
 }
 
+i{
+    color: #010101;
+    margin-bottom: 0.5rem;
+}
+
 a#logo{
     display: none;
 }
@@ -85,6 +90,11 @@ p, a, li, h2{
 .responsiveMenu{
     max-width: 50%;
     flex-wrap: wrap;
+}
+
+
+a.bookTable, a.alreadyBooked{
+    
 }
 
 .responsiveOpeningHours{

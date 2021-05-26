@@ -28,6 +28,7 @@ if(!empty($_POST))
     }
 }
 
+echo('<h2>Fyll i samma uppgifter som vid bokningen</h2>');
 $app->getForm()->openForm("alreadyBookedForm");
 $app->getForm()->createInput("text", "name", "För- och Efternamn");
 $app->getForm()->createInputTel("number", "Telefonnummer");
