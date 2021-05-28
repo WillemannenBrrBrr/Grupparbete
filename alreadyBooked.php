@@ -3,16 +3,30 @@ require_once("include/CApp.php");
 
 $app->renderHeader("Home"); 
 
+$personalCode = $_GET["personalCode"];
+
 if(!empty($_POST))
 {
     $name = $_POST["name"];
     $number = $_POST["number"];
     $email = $_POST["email"];
 
-    
-    $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
-    $result = $app->getdb()->query($query);
-    $data = $result->fetch_assoc();
+    if(isset($personalCode))
+    {
+        $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE personalCode = $personalCode";
+        $result = $app->getdb()->query($query);
+        $data = $result->fetch_assoc();
+        
+        $name = $data["namn"];
+        $number = $data["number"];
+        $email = $data["email"];
+    }
+    else
+    {
+        $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
+        $result = $app->getdb()->query($query);
+        $data = $result->fetch_assoc();
+    }
     
     if($result->num_rows != 0)
     {

@@ -62,17 +62,19 @@ if(!empty($_POST))
     $email = $_POST["email"];
     $table = $_POST["table"];
 
+    $personalCode = $number . $table;
+
     if(isset($booked) && $table == $booked)
     {
         echo("Bordet är redan bokat");
     }
     else
     {
-        $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord) 
-        VALUES ('$selectedTime', '$name', '$number', '$email', '$table')";
+        $query = "INSERT INTO booking (`unix timestamp`, namn, nummer, email, bord, personalCode) 
+        VALUES ('$selectedTime', '$name', '$number', '$email', '$table', '$personalCode')";
         $app->getdb()->query($query);
 
-        redirect("verification.php?table=$table&time=$selectedTime");
+        redirect("verification.php?table=$table&time=$selectedTime&personalCode=$personalCode");
     }
 }
 
