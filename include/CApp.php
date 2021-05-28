@@ -9,6 +9,12 @@ function print_r_pre($data)
     echo('</pre>');
 }
 
+function dd($data)
+{
+    print_r_pre($data);
+    die();
+}
+
 function redirect(string $url)
 {
 	header("location: $url");

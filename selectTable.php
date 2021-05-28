@@ -88,6 +88,6 @@ $form->createSubmit("Boka bord");
 $form->closeForm();
 $form->closeDiv();
 
-$app->renderFooter(); 
+$app->renderFooter();
 
 ?>

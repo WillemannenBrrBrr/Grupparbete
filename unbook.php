@@ -3,19 +3,16 @@ require_once("include/CApp.php");
 
 $app->renderHeader("Home"); 
 
-if(isset($_GET['bord']) && isset($_GET['namn']) && isset($_GET['nummer']) && isset($_GET['email']))
+if(isset($_GET['personalCode']))
 {
-    $tableId = $_GET['bord'];
-    $name = $_GET['namn'];
-    $number = $_GET['nummer'];
-    $email = $_GET['email'];
+    $personalCode = $_GET['personalCode'];
 }
 else
 {
     throw new Exception("allt är inte ifyllt");
 }
 
-$query= "DELETE FROM booking WHERE namn='$name' AND nummer='$number' AND email='$email'";
+$query= "DELETE FROM booking WHERE personalCode='$personalCode'";
 $app->getdb()->query($query);
 
 redirect("index.php");

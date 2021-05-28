@@ -6,23 +6,21 @@ $form = $app->getForm();
 
 if(isset($_GET["personalCode"]))
 {
-    $personalCode = $_GET["personalCode"];
+    $personalCode = $_GET['personalCode'];
 
     $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE personalCode = $personalCode";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
-    
-    $name = $data["namn"];
-    $number = $data["nummer"];
-    $email = $data["email"];
 
     if($result->num_rows != 0)
     {
-        echo("Din bokning" . "<br/>");
-        echo("Namn: " . $data["namn"] . "<br/>");
-        echo("Bord: " . $data["bord"] . "<br/>");
-        echo("Datum: " . date('d-m-Y H:i', $data['unix timestamp']) . "<br/>");
-        echo('<a class="unbook" href="unbook.php?bord=' . $data["bord"] . '&namn=' . $name . '&nummer=' . $number . '&email=' . $email . '">Avboka här</a>');
+        $form->openDiv("unbookMSG");
+        echo("<p>Din bokning</p>");
+        echo("<p>Namn: " . $data["namn"] . "</p>");
+        echo("<p>Bord: " . $data["bord"] . "</p>");
+        echo("<p>Datum: " . date('d-m-Y H:i', $data['unix timestamp']) . "</p>");
+        echo('<p><a class="unbook" href="unbook.php?personalCode=' . $personalCode . '">Avboka här</a></p>');
+        $form->closeDiv();
     }
 }
 
@@ -32,18 +30,18 @@ if(!empty($_POST))
     $number = $_POST["number"];
     $email = $_POST["email"];
 
-    $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord` FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
+    $query = "SELECT `unix timestamp`, `namn`, `nummer`, `email`, `bord`, personalCode FROM `booking` WHERE namn='$name' AND nummer='$number' AND email='$email'";
     $result = $app->getdb()->query($query);
     $data = $result->fetch_assoc();
 
     if($result->num_rows != 0)
     {
         $form->openDiv("unbookMSG");
-        echo("Din bokning" . "<br/>");
-        echo("Namn: " . $data["namn"] . "<br/>");
-        echo("Bord: " . $data["bord"] . "<br/>");
-        echo("Datum: " . date('d-m-Y H:i', $data['unix timestamp']) . "<br/>");
-        echo('<a class="unbook" href="unbook.php?bord=' . $data["bord"] . '&namn=' . $name . '&nummer=' . $number . '&email=' . $email . '">Avboka här</a>');
+        echo("<p>Din bokning</p>");
+        echo("<p>Namn: " . $data["namn"] . "</p>");
+        echo("<p>Bord: " . $data["bord"] . "</p>");
+        echo("<p>Datum: " . date('d-m-Y H:i', $data['unix timestamp']) . "</p>");
+        echo('<p><a class="unbook" href="unbook.php?personalCode=' . $data["personalCode"] . '">Avboka här</a></p>');
         $form->closeDiv();
     }
     else
