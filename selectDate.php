@@ -14,8 +14,8 @@ echo('<h2>Välj datum och tid</h2>');
 
 $form->openDiv("dateAndTime");
 $form->openForm();
-$form->createInput("date", "date", "Datum");
-$form->createInput("time", "time", "Tid");
+$form->createInputDate("date", "Datum");
+$form->createInputTime("time", "Tid");
 $form->createSubmit("Gå vidare");
 $form->closeForm();
 $form->closeDiv();
