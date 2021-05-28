@@ -92,6 +92,13 @@ p, a, li, h2{
     flex-wrap: wrap;
 }
 
+.unbookMSG{
+    text-align: center;
+}
+
+.unbook{
+    color: blue;
+}
 
 a.bookTable, a.alreadyBooked{
     
@@ -142,10 +149,6 @@ input[type=submit]{
 
 input[type=submit]:hover{
     background-color: #8b0000;
-}
-
-.unbook{
-    color:blue;
 }
 
 .mapMarkers, .marker{
